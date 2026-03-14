@@ -164,7 +164,7 @@ public class Armour extends Equippable {
             String.format("  Def: %d", this.getDefense( )),
             String.format("  Mtl: %s",this.getMaterial()),
             String.format("  Mdr: %s (Lvl %d)", this.getModifier(),this.getModifierLevel()),
-            String.format("  Elt: %s", this.getElement()),
+            String.format("  Emt: %s", this.getElement()),
             ""
         );
     }
