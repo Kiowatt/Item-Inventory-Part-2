@@ -36,7 +36,7 @@ public class Consumable extends Item {
      */
     public Consumable()
     {
-        super("[Placeholder]");
+        super("src.name");
 
         this.effect = "";
         this.uses   = 0;
