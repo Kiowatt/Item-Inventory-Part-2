@@ -36,7 +36,7 @@ public class Consumable extends Item {
      */
     public Consumable()
     {
-        super("src.name");
+        super("[Placeholder]");
 
         this.effect = "";
         this.uses   = 0;
@@ -51,7 +51,7 @@ public class Consumable extends Item {
     {
         // Complete this function.
         // Update the call to super
-        super("[Placeholder]");
+        super("src.name");
         this.effect =src.effect;
         this.uses = src.uses;
     }
