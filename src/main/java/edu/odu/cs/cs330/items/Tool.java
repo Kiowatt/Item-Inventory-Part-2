@@ -44,10 +44,7 @@ public class Tool extends Equippable {
      */
     public Tool(Tool src)
     {
-        super();
-
-        this.setName(src.name);
-
+        super(src.name);
         // Complete this function
         this.durability = src.durability;
         this.speed= src.speed;
@@ -90,8 +87,8 @@ public class Tool extends Equippable {
     @Override
     public void read(Scanner snr)
     {
-        super.name    = snr.next();
-        material      = snr.next();
+        super.name = snr.next();
+        material= snr.next();
 
         // Complete this function
 
@@ -112,7 +109,6 @@ public class Tool extends Equippable {
         cpy.setName(this.name);
 
         // Complete this function
-        cpy.setName(this.name);
         cpy.durability = this.durability;
         cpy.speed=this.speed;
         cpy.material = this.material;
