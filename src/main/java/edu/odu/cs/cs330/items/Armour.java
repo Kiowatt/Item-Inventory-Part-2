@@ -43,6 +43,14 @@ public class Armour extends Equippable {
     public Armour(Armour src)
     {
         // Complete this function.
+
+        super(src.name);
+        this.durability = src.durability;
+        this.material = src.material;
+        this.modifier = src.modifier;
+        this.modifierLevel = src.modifierLevel;
+        this.element = src.element;
+        this.defense = src.defense;
     }
 
     /**
@@ -80,6 +88,13 @@ public class Armour extends Equippable {
         super.name    = snr.next();
 
         // Complete this function.
+        super.name = snr.next();
+        this.material = snr.next();
+        this.durability= snr.nextInt();
+        this.defense = snr.nextInt();
+        this.modifier = snr.next();
+        this.modifierLevel = snr.nextInt();
+        this.element=snr.next();
     }
 
     /**
@@ -91,6 +106,13 @@ public class Armour extends Equippable {
         Armour cpy = new Armour();
 
         // Complete this function.
+        cpy.name = this.name;
+        cpy.durability = this.durability;
+        cpy.material = this.material;
+        cpy.modifier = this.modifier;
+        cpy.modifierLevel=this.modifierLevel;
+        cpy.element = this.element;
+        cpy.defense= this.defense;
 
         return cpy;
     }
@@ -112,7 +134,8 @@ public class Armour extends Equippable {
 
         // Complete this function.
         // Remove the placeholder return
-        return false;
+        return this.name.equals(rhsItem.name) && this.material.equals(rhsItem.material) && this.modifier.equals(rhsItem.modifier) && this.element.equals(rhsItem.element);
+        
     }
 
     /**
@@ -124,7 +147,7 @@ public class Armour extends Equippable {
     {
         // Complete this function.
         // Remove the placeholder return
-        return -1;
+       return this.name.hashCode() + this.material.hashCode() + this.modifier.hashCode() + this.element.hashCode();
     }
 
     /**
@@ -137,7 +160,12 @@ public class Armour extends Equippable {
         // Complete this function... treat the return as a hint.
         return String.join(
             System.lineSeparator(),
-            String.format("  Nme: %s", super.getName()),
+            String.format("  Nme: %s",super.getName()),
+            String.format("  Dur: %d", this.getDurability()),
+            String.format("  Def: %d", this.getDefense( )),
+            String.format("  Mtl: %s",this.getMaterial()),
+            String.format("  Mdr: %s (Lvl %d)", this.getModifier(),this.getModifierLevel()),
+            String.format("  Elt: %s" this.getElement()),
             ""
         );
     }
