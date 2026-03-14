@@ -51,7 +51,7 @@ public class Consumable extends Item {
     {
         // Complete this function.
         // Update the call to super
-        super("src.name");
+        super(src.name);
         this.effect =src.effect;
         this.uses = src.uses;
     }
