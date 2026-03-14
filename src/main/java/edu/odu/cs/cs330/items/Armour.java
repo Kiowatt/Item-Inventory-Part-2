@@ -88,7 +88,6 @@ public class Armour extends Equippable {
         super.name    = snr.next();
 
         // Complete this function.
-        super.name = snr.next();
         this.material = snr.next();
         this.durability= snr.nextInt();
         this.defense = snr.nextInt();
@@ -165,7 +164,7 @@ public class Armour extends Equippable {
             String.format("  Def: %d", this.getDefense( )),
             String.format("  Mtl: %s",this.getMaterial()),
             String.format("  Mdr: %s (Lvl %d)", this.getModifier(),this.getModifierLevel()),
-            String.format("  Elt: %s" this.getElement()),
+            String.format("  Elt: %s", this.getElement()),
             ""
         );
     }
